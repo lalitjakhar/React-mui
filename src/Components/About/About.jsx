@@ -84,7 +84,7 @@ const About = () => {
     return (
         <>
             <div className="About">
-                <ImageList sx={{ width:1298, height: 600 }}>
+                <ImageList sx={{ width:1298, height: 500 }}>
                     <ImageListItem key="Subheader" cols={2}>
                         <ListSubheader component="div">October</ListSubheader>
                     </ImageListItem>
