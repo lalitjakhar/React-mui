@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import { Delete } from '@mui/icons-material';
+import Button from '@mui/material/Button';
 
 function App() {
+  const [color,setColor]=useState("secondary")
+  const[disableBtn ,setdisableBtn]=useState(false)
+
+  function customMe()
+  {
+    // setColor("secondary")
+    setdisableBtn("true")
+    alert("function called")
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>React Material UI</h1>
+      <Button
+      color={color}
+      disabled={disableBtn}
+      variant="contained"
+      onclick={()=>{customElements()}}
+      startIcon={<Delete />}
+      >Click Me
+      </Button>
     </div>
   );
 }
